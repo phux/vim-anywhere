@@ -56,7 +56,7 @@ touch $TMPFILE
 # Linux
 if [[ $OSTYPE == "linux-gnu" ]]; then
   chmod o-r $TMPFILE # Make file only readable by you
-  exec urxvt -e sh -i -c "nvim -u NONE -c 'startinsert' $TMPFILE; cat $TMPFILE | xclip -selection clipboard"
+  exec st -e sh -i -c "nvim -u NONE -c 'startinsert' $TMPFILE; cat $TMPFILE | xclip -selection clipboard"
 
 # OSX
 elif [[ $OSTYPE == "darwin"* ]]; then
